@@ -1,0 +1,468 @@
+/* css Zen Garden default style v1.02 */
+/* css released under Creative Commons License - http://creativecommons.org/licenses/by-nc-sa/1.0/  */
+
+/* This file based on 'Tranquille' by Dave Shea */
+/* You may use this file as a foundation for any new work, but you may find it easier to start from scratch. */
+/* Not all elements are defined in this file, so you'll most likely want to refer to the xhtml as well. */
+
+/* Your images should be linked as if the CSS file sits in the same folder as the images. ie. no paths. */
+
+/* basic elements */
+html {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  bottom: 0;
+}
+body {
+  font: 75% georgia, sans-serif;
+  line-height: 1.88889;
+  color: #555753;
+  background: #fff url(http://csszengarden.com/001/blossoms.jpg) no-repeat bottom right;
+  margin: 0;
+  padding: 0;
+}
+p {
+  margin-top: 0;
+  text-align: justify;
+}
+h3 {
+  font: italic normal 1.4em georgia, sans-serif;
+  letter-spacing: 1px;
+  margin-bottom: 0;
+  color: #7d775c;
+}
+a:link {
+  font-weight: bold;
+  text-decoration: none;
+  color: #b7a5df;
+}
+a:visited {
+  font-weight: bold;
+  text-decoration: none;
+  color: #d4cddc;
+}
+a:hover,
+a:focus,
+a:active {
+  text-decoration: underline;
+  color: #9685ba;
+}
+abbr {
+  border-bottom: none;
+}
+
+
+
+.page-wrapper {
+  background: url(./images/15.jpg) center center no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+.intro {
+  width: 100%;
+}
+#banner {
+  background: url(./images/抹茶封面.jpg) no-repeat top left;
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  height: 100vh;
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  flex-shrink: 0;
+  overflow: hidden;
+  position: relative;
+  color: white;
+}
+
+/* 透明綠色*/
+.preamble {
+  position: absolute;
+  width: 25%;
+  height: 350px;
+  margin: 0;
+  padding: 0;
+  background: rgba(198, 243, 125, 0.8);
+  border-radius: 3%;
+  left: 56%;
+  top: 29%;
+  z-index: 99;
+}
+.preamble p {
+  padding: 13px;
+  color: #fff;
+  font-family: "Andika New Basic", sans-serif;
+}
+
+/* 固定 版面畫下去 */
+.explanation {
+  height: 100vh;
+  top: 10%;
+  position: relative;
+  background: url("./images/6.jpg") no-repeat center/cover;
+  background-attachment: fixed;
+  border: 100px solid rgba(176, 236, 189, 0.8);
+}
+
+.explanation h3 {
+  display: flex;
+  backdrop-filter: blur(5px);
+  border-radius: 7px;
+  position: absolute;
+top: 80%;
+left: 25%;
+  font-size: 70px;
+  padding: 0 15px;
+  justify-content: center;
+  align-items: center;
+
+}
+/* 大圖字  透明圖層 綠色*/
+.explanation p {
+  position: relative;
+  top: -100%;
+  left: 75%;
+  width: 25%;
+  font-family: "Andika New Basic", sans-serif;
+  color: white;
+  font-size: 16px;
+  backdrop-filter: blur(5px);
+  background: rgba(62, 83, 28, 0.7);
+  padding: 30px;
+  margin: 0;
+  border-radius: 3%;
+  /* animation: fadeInRight;
+  animation-duration: 5s;
+  animation-iteration-count: 1; */
+
+  /* z-index: 90; */
+}
+
+/* 綠框 小方塊 */
+.summary {
+  /* background:url(./images/9.png) ; */
+  width: 50%;
+  height: 300px;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  font-family: "Playfair Display", serif;
+  border: 100px solid rgb(141, 175, 47);
+  border-image: url(./images/9.png);
+  padding-top: 120px;
+  padding-left: 10px;
+  position: relative;
+  left: 0px;
+  right: 100px;
+  top: 10%;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
+}
+
+@media (max-width: 600px) {
+  .summary::before {
+    width: 50px;
+  }
+  .explanation p {
+    width: 100%;
+  }
+  .participation{
+    width: 100%;
+  }
+}
+.summary p {
+  font-size: 18px;
+  letter-spacing: 0.5px;
+  margin-bottom: 15px;
+  backdrop-filter: blur(5px);
+  z-index: 9999;
+}
+
+/* 直的飲料 */
+.summary::before {
+  content: "";
+  position: absolute;
+  top: 1%;
+  left: 8px;
+  /* border-radius: 50px; */
+  width: 100%;
+  height: 400px;
+  background: url(./images/3.jpg) no-repeat center / cover;
+  font-size: 35px;
+  line-height: 100px;
+  /* font-weight: 300; */
+  color: #333;
+  padding-left: 12px;
+  z-index: 999;
+}
+
+.summary p {
+  font-size: 18px;
+  letter-spacing: 0.5px;
+  margin-bottom: 15px;
+}
+
+/* 飲料圓圈 */
+.participation {
+  position: absolute;
+  background: url(./images/11.jpg) no-repeat center/cover;
+  background-attachment: fixed;
+  width: 600px;
+  height: 600px;
+  left: 5%;
+  top:82%;
+  box-shadow: 5px 10px 5px rgba(0, 0, 0, 0.4);
+  border-radius: 50%;
+  /* animation: fadeInDown;
+  animation-duration: 5s;
+  animation-iteration-count: 1; */
+  transition: 2s;
+  
+}
+.participation:hover {
+  background: url(./images/10.jpg);
+  transform: scale(1.1);
+}
+.participation:hover p {
+  display: none;
+}
+.participation:hover h3 {
+  display: none;
+}
+.participation p {
+  position: relative;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding: 10px;
+  top: 70px;
+  padding: 10px;
+  margin-left: 70px;
+  margin-right: 70px;
+  color: #fff;
+  font-family: "Andika New Basic", sans-serif;
+}
+.participation h3 {
+  position: relative;
+  top:60px;
+  left: 100px;
+  font-size: 40px;
+  color: #fff;
+}
+.benefits {
+  position: absolute;
+  /* background: rgb(185, 245, 208); */
+  background: url(./images/11.jpg) no-repeat center/cover;
+  background-attachment: fixed;
+  width: 400px;
+  height: 400px;
+  left: 59%;
+  top: 88%;
+  border-radius: 50%;
+  padding: 10px;
+  box-shadow: 5px 10px 5px rgba(0, 0, 0, 0.4);
+  font-family: "Andika New Basic", sans-serif;
+  transition:3s
+
+}
+/* 湯匙圖 */
+.benefits:hover {
+  background: url(./images/MatchaScoop.jpg) no-repeat center / cover;
+transform: scale(0.8);
+}
+/* .zen-benefits{
+        } */
+.benefits p {
+  display: inline-block;
+  text-indent: 10px;
+  padding-top: 3%;
+  padding-bottom: 2%;
+  line-height: 30px;
+  margin-left: 20px;
+  margin-right: 15px;
+  color: #fff;
+}
+.benefits:hover p {
+display: none;
+}
+.benefits:hover h3 {
+display: none;
+}
+
+.benefits h3 {
+  position: relative;
+  top: 10px;
+  left: 70px;
+  font-size: 40px;
+  color: #fff;
+}
+
+
+.requirements {
+  position: relative;
+  /* background: turquoise; */
+  width: 50%;
+  height: 500px;
+  border: 100px solid rgb(66, 92, 64);
+  border-right: 1000px solid rgb(66, 92, 64);
+  box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.4);
+  background: url(./images/8.jpg) no-repeat center / cover;
+  background-attachment: fixed;
+  z-index: 998;
+}
+.requirements p {
+  font-family: "Andika New Basic", sans-serif;
+  position: relative;
+  left: 105%;
+  top:0.5%;
+  width: 75%;
+  height: 100px;
+  line-height: 20px;
+  color: #fff;
+  padding-top: 10px;
+  margin: 0;
+  margin-right: 10px;
+  margin-left: 10px;
+  font-size: 15px;
+}
+
+.requirements h3 {
+  position: absolute;
+  color: #fff;
+  font-size: 40px;
+  top: -18%;
+  left: 106%;
+}
+
+
+.design-selection {
+  position: relative;
+  background: url(./images/11.jpg) no-repeat center / cover;
+  background-attachment: fixed;
+  /* box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.4); */
+  top: 50%;
+  width: 340px;
+  height: 340px;
+  left: 43%;
+  border-radius: 50%;
+  /* animation: fadeInDown;
+  animation-duration: 5s;
+  animation-iteration-count: 1;
+  transition:3s ; */
+  transition:3s
+}
+.design-selection:hover {
+  background: url(./images/2.jpg) no-repeat center / cover;
+transform: scale(1.1);
+}
+.design-selection:hover ul {
+display: none;
+}
+.design-archives:hover h3{
+display: none;
+}
+.design-selection nav {
+  position: relative;
+  top: 30px;
+  left: 10px;
+  line-height: 20px;
+  line-height: 30px;
+  margin-left: 15px;
+  font-family: "Andika New Basic", sans-serif;
+}
+.design-selection h3 {
+  color: #fff;
+  position: relative;
+  font-size: 20px;
+  top: 40px;
+  left:60px;
+}
+.design-selection:hover h3 {
+display: none;
+}
+/*小方塊蛋糕 */
+.design-archives {
+  background: url(./images/11.jpg) no-repeat center / cover;
+  background-attachment: fixed;
+  position: relative;
+  height: 200px;
+  width: 200px;
+  top:85%;
+  left: 85%;
+  border-radius: 50%;
+  box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.4);
+  font-family: "Andika New Basic", sans-serif;
+  transition:3s
+}
+.design-archives:hover {
+  background: url(./images/12.jpg) no-repeat center / cover;
+transform: scale(0.9);
+}
+.design-archives:hover ul{
+  display: none;
+}
+.design-archives nav {
+  color: #fff;
+  position: relative;
+  top: 50px;
+}
+.design-archives h3 {
+  color: #fff;
+  position: relative;
+  top: 50px;
+  left: 20px;
+  font-size: 20px;
+}
+
+.zen-resources {
+  position: relative;
+  top: -2500px;
+  height: 200px;
+  width: 200px;
+  left:81%;
+  padding: 20px;
+  font-family: "Andika New Basic", sans-serif;
+  background: rgba(203, 223, 171, 0.9);
+  border-radius: 5%;
+  z-index: 99;
+}
+  @keyframes float-item {
+      0% {
+        transform: translate(0, 0);
+      }
+
+      50% {
+        transform: translate(0, -10px);
+      }
+
+      100% {
+        transform: translate(0, 0);
+      }
+    }
+/* --------------------------------------- */
+#footer {
+display: flex;
+  background:rgb(246, 255, 127);
+  text-align: center;
+  height: 70px;
+  justify-content: center;
+  align-items: center;
+font-size: 50px;
+font-family: "Playfair Display", serif;
+letter-spacing:10px
+}
+/* --------------------------------------------- */
+
+/* .design-selection {
+  background: #555753;
+  height: 100%;
+  width: 400px;
+} */
+
+/* 選單字 */
