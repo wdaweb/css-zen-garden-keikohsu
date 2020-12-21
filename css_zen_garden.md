@@ -8,9 +8,3 @@
 6. 版面最後完成圖，影像處理軟體完成的圖片。（繳圖片,layout_final.jpg）。
 7. 各檔案應放置於對應的目錄，例如：css、js。  
 
-##樹狀圖
-![unsplash 圖片](./images/結構圖.jpg)  
-##草圖
-![unsplash 圖片](./images/草稿.png)  
-##完成圖
-![unsplash 圖片](./images/預覽圖.jpg)
